@@ -1,25 +1,20 @@
-// Set current year in footer
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+(function () {
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear().toString();
+  }
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const targetId = link.getAttribute("href");
-    if (!targetId || targetId === "#") return;
-
-    const el = document.querySelector(targetId);
-    if (!el) return;
-
-    e.preventDefault();
-    const headerOffset = 70;
-    const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top,
-      behavior: "smooth",
+  // Smooth scroll for internal nav links
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", (evt) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#" || href.charAt(0) !== "#") return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      evt.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
-});
+})();
