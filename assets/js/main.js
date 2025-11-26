@@ -14,8 +14,8 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!el) return;
 
     e.preventDefault();
-    const offset = 72; // header height offset
-    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    const headerOffset = 70;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
 
     window.scrollTo({
       top,
