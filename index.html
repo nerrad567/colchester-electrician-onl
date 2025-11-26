@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <title>
@@ -27,38 +27,51 @@
           <a href="#contact">contact</a>
         </nav>
 
-        <div class="site-meta">
-          <span class="site-meta-item">
-            <span class="dot dot--red"></span> Gray&nbsp;Logic&nbsp;Electrical
-          </span>
-          <a
-            href="https://www.graylogic.uk"
-            class="site-meta-link"
-            target="_blank"
-            rel="noreferrer"
+        <div class="site-header-right">
+          <div class="site-meta">
+            <span class="site-meta-item">
+              <span class="dot dot--red"></span>
+              Gray&nbsp;Logic&nbsp;Electrical
+            </span>
+            <a
+              href="https://www.graylogic.uk"
+              class="site-meta-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              graylogic.uk →
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle colour scheme"
           >
-            graylogic.uk →
-          </a>
+            <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
         </div>
       </header>
 
       <!-- MAIN SHELL -->
       <main class="shell" aria-label="Colchester electrician overview">
-        <!-- Retro glass overlay -->
+        <!-- Retro scanline overlay -->
         <div class="shell-overlay" aria-hidden="true"></div>
 
         <!-- HERO -->
         <section class="hero" id="top">
           <div class="hero-badge">
             <span class="dot dot--amber"></span>
-            Colchester electrician · Domestic & commercial
+            Colchester electrician · Domestic &amp; commercial
           </div>
 
           <h1 class="hero-title">
             Electrical work done properly.<br />
-            <span class="hero-title-accent"
-              >Colchester · Gray&nbsp;Logic&nbsp;Electrical</span
-            >
+            <span class="hero-title-accent">
+              Colchester · Gray&nbsp;Logic&nbsp;Electrical
+            </span>
           </h1>
 
           <p class="hero-sub">
@@ -192,11 +205,11 @@
 
           <div class="terminal-strip">
             <p>// contact block</p>
-            <pre><code>graylogic.uk        # main business site
-colchester.electrician.onl  # this landing
-terminal.electrician.onl    # interactive CV
-electrician.onl             # portfolio / overview
-tel: 01206 699 789
+            <pre><code>graylogic.uk                # main business site
+colchester.electrician.onl   # this landing
+terminal.electrician.onl     # interactive CV
+electrician.onl              # portfolio / overview
+tel:   01206 699 789
 email: info@graylogic.uk</code></pre>
           </div>
         </section>
@@ -279,8 +292,8 @@ email: info@graylogic.uk</code></pre>
         <!-- FOOTER -->
         <footer class="site-footer">
           <p>
-            © <span id="year"></span> Gray Logic Electrical – Colchester ·
-            Domestic &amp; Commercial.
+            © <span id="year"></span>
+            Gray Logic Electrical – Colchester · Domestic &amp; Commercial.
           </p>
           <p>
             Linked with
